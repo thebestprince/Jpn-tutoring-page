@@ -92,13 +92,13 @@ section .scroll.text5
 
 footer
 {
-    background-color: red;
-    opacity: .8;
+    background-color: #FFBF00	;
+    opacity: .9;
 
 }
 #bottom-logo{
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
 }
 .footer_row{
     display: flex;
