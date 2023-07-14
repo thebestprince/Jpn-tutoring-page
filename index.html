@@ -9,11 +9,13 @@
 <body>
     <section>
         <div class="container">
-            <form>
+            <form onsubmit="sendEmail(); reset(); return false;">
                 <h3>GET IN TOUCH</h3>
-                <input type="text" id="name" placeholder="Your name" required>
-                <input type="email" id="email" placeholder="Email id" required>
-                <input type="text" id="phone" placeholder="Phone number" required>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="text" id="phone" placeholder="Phone Number" required>
+                <textarea id="message" rows="4" placeholder="Tell me your level of Japanese and what you want to study" required></textarea>
+                <button type="submit">Send</button>
             </form>
 
         </div>
@@ -83,5 +85,22 @@
         <img id="bottom-logo" src="footer-logo.png" alt="Dwayne Reed's logo">
     </div>
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "username",
+    Password : "password",
+    To : 'them@website.com',
+    From : "you@isp.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+
+        }
+    </script>
 </body>
 </html>
