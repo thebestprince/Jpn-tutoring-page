@@ -89,12 +89,10 @@
     <script>
         function sendEmail(){
             Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "username",
-    Password : "password",
-    To : 'them@website.com',
+    SecureToken : "b85c5e4d-37cd-445a-a33d-5065a8bca89f",
+    To : 'dreeedjr1992@gmai.com',
     From : "you@isp.com",
-    Subject : "This is the subject",
+    Subject : "***NEW TUTORING INQUIRY***",
     Body : "And this is the body"
 }).then(
   message => alert(message)
